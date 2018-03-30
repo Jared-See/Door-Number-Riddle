@@ -23,8 +23,24 @@ public class Main {
     System.out.println("How many times does the person walk up the hallway?");
     int loop_numbers = scan.nextInt(); //Creates variable for the number of times someone walks down the hallway
     System.out.println("What door do you want to know the state of:");
-    int door_of_interest = scan.nextInt();
+    int door_of_interest = scan.nextInt(); //Creates variable for the door you want to find the state of
+    door_state_find(door_numbers, loop_numbers, door_of_interest);
+    }
 
+    //Function to find State of the door given the 3 parameters\
+    public static boolean door_state_find(int number_of_door, int number_of_loops, int door_of_interest){
+         for (int i = 1;  i <= number_of_loops; i++){ //Simulates someone walking up the hallway for the number of loops
+            //Declaring Variables
+            int door_checker = door_of_interest%i; //Figures out if the door changes state on the loop
+            boolean state_of_door = false; //The door starts out as closed
+
+             //Switches the state of the door when necessary
+             if(door_checker == 0){
+                 if (state_of_door = false) { state_of_door = true; } //Switches value of door
+                 if (state_of_door = true) { state_of_door = false; } //Switches state of door
+            }
+         }
+         return true;
     }
 }
 
