@@ -13,8 +13,8 @@ public class Main {
         System.out.println("every other door because every other door is a multiple of 2 and so on until they complete the set number ");
         System.out.println("of loops which you determine. This program will help you to determine the state (open or close) of a door, you pick");
         System.out.println("which one, in a hallway with a certain number doors you decide, after a certain number of walks up the hallway which you decide.");
-        System.out.println(" ");//Creates a blank space to separate ethe explanation adn the questions
-        System.out.println(" ");//Creates a blank space to separate ethe explanation adn the questions
+        System.out.println(" ");//Creates a blank space to separate the explanation adn the questions
+        System.out.println(" ");//Creates a blank space to separate the explanation adn the questions
 
         //Lets User Decide the parameters for the hallway
         Scanner scan = new Scanner(System.in); //Allows user input using "scan"
@@ -41,11 +41,12 @@ public class Main {
                  else if (state_of_door == true) { state_of_door = false; } //Switches state of door
             }
 
-            i++;
-             if(door_of_interest%){ //The person interacts with the D.O.I
-                //Change door state
+            i++; //Moves onto next loop or walk up the hallway
+             if(door_of_interest % i == 0){ //The person interacts with the D.O.I
+                door_checker = true; //You need to change the state of the door
+             }else {
+                 door_checker = false; //Otherwise you don't need to change the state of the door
              }
-            System.out.print(door_checker);
          }
 
          //Outputs the state of the door
